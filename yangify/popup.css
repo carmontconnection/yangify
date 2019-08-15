@@ -1,423 +1,160 @@
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
 
 body {
-  min-height: 475px;
-  min-width:285px;
-  margin:0;
+    min-height: 475px;
+    min-width: 285px;
+    margin: 0;
 }
 
-.mainTitle {
-  font-family: 'Red Hat Display', sans-serif;
-  font-size:2em;
-  color:#fff;
-  letter-spacing:0.02em;
-  margin-left:50px;
-  margin-top:27px;
+.progressBar {
+    text-align: center;
 }
 
-.mainLogo {
-  width:150px;
-  /* height:60px; */
-  margin-top:22px;
-  margin-left:20px;
-  position:absolute;
+li {
+    width: 50%;
+    float: left;
+    list-style-type: none;
+
+    padding-right: 5.3333333%;
 }
 
-.mainTitleDes {
-  color:#e1e1e1;
-  clear:both;
-  display:relative;
-  margin-top:84px;
-  margin-left:15px;
-  font-size:0.93em;
-  font-family: 'Red Hat Display', sans-serif;
-  letter-spacing:0.045em;
-
+li:nth-child(even) {
+    margin-bottom: 5em;
 }
 
-.section1 {
-background-color:#002D70;
-display:flex;
-margin-top:0px;
-height:125px;
-z-index:4;
-position:relative;
-border-radius: 0px 0px 70% 0px;
+progress:not(value) {}
+
+progress[value] {
+    appearance: none;
+    /* border: none; */
+    width: 72%;
+    height: 34px;
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 2px 1px 2px 3px #e1e1e1;
+    color: royalblue;
+    position: relative;
+    margin: 0 0 1.5em;
 }
 
-.section2 {
-background-color:#fff;
-display:flex;
-height:160px;
-border-radius: 0px 0px 70% 0px;
-margin-top:0px;
-position:relative;
-z-index:3;
+progress[value]::-webkit-progress-bar {
+    background-color: #fff;
+    border-radius: 3px;
+    /* box-shadow: 0 2px 3px rgba(0,0,0,.5) inset; */
 }
 
-.section22 {
-background-color:#fff;
-display:flex;
-height:220px;
-border-radius: 0px 0px 70% 0px;
-margin-top:0px;
-position:relative;
-z-index:3;
+progress[value]::-webkit-progress-value {
+    position: relative;
+
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+
+    /* Let's animate this */
+    animation: animate-stripes 5s linear infinite;
 }
 
-.section3 {
-background-color:#DA3248;
-/* display:flex; */
-height:207px;
-padding-top:130px;
-border-radius: 0px 0px 0px 0px;
-margin-top:-115px;
-position:relative;
-z-index:2;
+@keyframes animate-stripes {
+    100% {
+        background-position: -100px 0;
+    }
 }
 
-.section33 {
-background-color:#DA3248;
-/* display:flex; */
-height:87px;
-padding-top:130px;
-border-radius: 0px 0px 0px 0px;
-margin-top:-120px;
-position:relative;
-z-index:2;
+
+progress[value]::-webkit-progress-value:after {
+    content: '';
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+    top: 7px;
+    right: 7px;
+
+    background-color: white;
+    border-radius: 100%;
 }
 
-.yangMeterMentions {
-  text-align:center;
-  font-size:1.25em;
-}
-.changeYangTo {
-  text-align:center;
-  font-size:1.2em;
-  clear:both;
-  color:#fff;
-  letter-spacing:0.02em;
-  margin-top:2px;
-  font-family: 'Red Hat Display', sans-serif;
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    background-image:
+        -moz-linear-gradient(135deg,
+            transparent,
+            transparent 33%,
+            rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%,
+            transparent 66%),
+        -moz-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .2)),
+        -moz-linear-gradient(left, #09c, #f44);
+
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+
+    /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
 }
 
-.radioButtons {
-  margin-left:29px;
-  color:#fff;
-  margin-top:16px;
-  margin-bottom:15px;
-  clear:both;
+.progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+
+    /* Dimensions should be similar to the parent progress element. */
+    width: 100%;
+    height: 20px;
 }
 
-.radioButtons1 {
-  float:left;
-  margin-right:20px;
+.progress-bar span {
+    background-color: royalblue;
+    border-radius: 3px;
 
-}
-.radioButtons2 {
-  float:left;
-  margin-right:20px;
-
-}
-.radioButtons3 {
-  float:left;
-  margin-right:20px;
-}
-
-/*             */
-
-/* html, body {
-  height: 100%;
-  display: grid;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  color: #222;
-} */
-
-.cntr {
-  margin: auto;
-  /* background-color:#fff; */
-  /* width:80px; */
-}
-
-.btn-radio {
-  cursor: pointer;
-  display: inline-block;
-  float: left;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.btn-radio:not(:first-child) {
-  margin-left: 20px;
-}
-@media screen and (max-width: 480px) {
-  .btn-radio {
     display: block;
-    float: none;
-  }
-  .btn-radio:not(:first-child) {
-    margin-left: 0;
-    margin-top: 15px;
-  }
-}
-.btn-radio svg {
-  fill: none;
-  vertical-align: middle;
-}
-.btn-radio svg circle {
-  stroke-width: 2;
-  stroke: #fff;
-}
-.btn-radio svg path {
-  stroke: #0047af;/* #008FFF; */
-}
-.btn-radio svg path.inner {
-  stroke-width: 6;
-  stroke-dasharray: 19;
-  stroke-dashoffset: 19;
-}
-.btn-radio svg path.outer {
-  stroke-width: 2;
-  stroke-dasharray: 57;
-  stroke-dashoffset: 57;
-}
-.btn-radio input {
-  display: none;
-}
-.btn-radio input:checked + svg path {
-  transition: all 0.4s ease;
-}
-.btn-radio input:checked + svg path.inner {
-  stroke-dashoffset: 38;
-  transition-delay: 0.3s;
-}
-.btn-radio input:checked + svg path.outer {
-  stroke-dashoffset: 0;
-}
-.btn-radio span {
-  display: inline-block;
-  vertical-align: middle;
+    text-indent: -9999px;
 }
 
-.radioButtonText {
-  font-size:1.07em;
-  font-family: 'Red Hat Display', sans-serif;
-  letter-spacing:0.02em;
-  margin-left:4px;
-  color:#fff;
+p[data-value] {
+    position: relative;
 }
 
-.radioButtonsLeft {
-  float:left;
+p[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute;
+    right: 0;
 }
 
-.radioButtonsRight {
-  float:left;
-  margin-left:18px;
+.html5::-webkit-progress-value {
+    /* Gradient background with Stripes */
+    /* background-image:
+    -webkit-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 100%,
+                                                     rgba(218, 50, 72, 1) 33%,
+                                                     transparent,
+                                                     transparent 66%),
+    -webkit-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #ff5c1f, #38c28d); */
+
+    background: repeating-linear-gradient(-55deg,
+            #fff,
+            #fff 5px,
+            #fff 4px,
+            #DA3248 11.5px)
 }
 
-.optionButtonsBottom {
-position:relative;
-top:13px;
-clear:both;
-}
-
-.optionsButtonsText {
-  margin-bottom:7px;
-  font-size:1.1em;
-}
-
-.seperateOptionsBottom {
-  float:left;
-  margin-right:22px;
-}
-
-.btn {
-  border: 2px solid #fff;
-  display: inline-block;
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  transition: background 600ms ease, color 600ms ease;
-  font-size:0.95em;
-}
-input[name="toggle1"].toggle {
-  display: none;
-}
-input[name="toggle1"].toggle + label {
-  cursor: pointer;
-  min-width: 29px;
-}
-input[name="toggle1"].toggle + label:hover {
-  background: none;
-  /* color: #0047af; */
-}
-input[name="toggle1"].toggle + label:after {
-  background: #0047af;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
-  width: 100%;
-  z-index: -1;
-}
-input[name="toggle1"].toggle.toggle-left + label {
-  border-right: 0;
-}
-input[name="toggle1"].toggle.toggle-left + label:after {
-  left: 100%;
-}
-input[name="toggle1"].toggle.toggle-right + label {
-  margin-left: -5px;
-}
-input[name="toggle1"].toggle.toggle-right + label:after {
-  left: -100%;
-}
-input[name="toggle1"].toggle:checked + label {
-  cursor: default;
-  color: #fff;
-  transition: color 200ms;
-}
-input[name="toggle1"].toggle:checked + label:after {
-  left: 0;
-}
-
-/*  ------------------ */
-/*  ------------------ */
-
-
-input[name="toggle2"].toggle {
-  display: none;
-}
-input[name="toggle2"].toggle + label {
-  cursor: pointer;
-  min-width: 29px;
-}
-input[name="toggle2"].toggle + label:hover {
-  background: none;
-  /* color: #0047af; */
-}
-input[name="toggle2"].toggle + label:after {
-  background: #0047af;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
-  width: 100%;
-  z-index: -1;
-}
-input[name="toggle2"].toggle.toggle-left + label {
-  border-right: 0;
-}
-input[name="toggle2"].toggle.toggle-left + label:after {
-  left: 100%;
-}
-input[name="toggle2"].toggle.toggle-right + label {
-  margin-left: -5px;
-}
-input[name="toggle2"].toggle.toggle-right + label:after {
-  left: -100%;
-}
-input[name="toggle2"].toggle:checked + label {
-  cursor: default;
-  color: #fff;
-  transition: color 200ms;
-}
-input[name="toggle2"].toggle:checked + label:after {
-  left: 0;
-}
-
-
-
-/*             */
-
-.bottomButtons {
-  clear:both;
-}
-
-.bottomButton {
-/* background-color:#002D70; */
-background-color:transparent;
-border:2px solid #fff;
-color:#fff;
-font-family: 'Red Hat Display', sans-serif;
-font-weight:bold;
-letter-spacing:0.06em;
-border-radius:2px;
-margin-right:5px;
-margin-top:25px;
-cursor:pointer;
-transition:0.4s;
-padding: 4px 7px 4px 7px;
-}
-
-.bottomButton:hover {
-
-/* background-color:#fff;
-border:2px solid #fff;
-color:#DA3248;
-transition:0.5s; */
-
-text-decoration:underline;
-transition:0.4s;
-}
-
-.watchTutorialButton {
-margin-left:10px;
-}
-.DonateButton {
-
-}
-
-#settingsIcon {
-color:#fff;
-/* background-color:#fff; */
-font-size:2.09em;
-margin-left:10px;
-cursor:pointer;
-position:relative;
-top:4px;
-}
-.yangScorecardTitle {
-margin-top:0px;
-position:relative;
- margin-left:auto;
-margin-right:auto;
-clear:both;
-text-align:center;
-background-color:#000;
-}
-.yang-count {
-  clear:both;
-}
-.yangMeterTitle {
-  color:#DA3248;
-  float:left;
-}
-#cardIcon {
-  color:#DA3248; /* #002D70; */
-  font-size:2.17em;
-  margin-left:8px;
-  margin-top:12px;
-}
-
-.yang-count{
-  color:white;
-}
-
-.progress-bar{
-  margin: 20px;
-  background-color:white;
-  width: 120px;
-}
-
-.label-progress-bar{
-  color:white;
-  width:100%;
+.html5::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    /* background-image:
+    -moz-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 33%,
+                                                     rgba(0,0,0,.1) 33%,
+                                                     rgba(0,0,0,.1) 66%,
+                                                     transparent 66%),
+    -moz-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44); */
 }
