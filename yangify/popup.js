@@ -26,7 +26,7 @@ function intialSettings() {
   document.getElementById("yangPercentage").style.display = "block";
   document.getElementById("yangCaption").style.display = "block";
   document.getElementById("progressBar").style.display = "block";
-  document.getElementById("yangDes").style.display = "block";
+  // document.getElementById("yangDes").style.display = "block";
   document.getElementById("yangCount").style.display = "block";
 
   document.getElementById("settingsList").style.display = "none";
@@ -65,7 +65,7 @@ function toggleSettings() {
     document.getElementById("yangPercentage").style.display = "none";
     document.getElementById("yangCaption").style.display = "none";
     document.getElementById("progressBar").style.display = "none";
-    document.getElementById("yangDes").style.display = "none";
+    // document.getElementById("yangDes").style.display = "none";
     document.getElementById("yangCount").style.display = "none";
 
     document.getElementById("settingsList").style.display = "block";

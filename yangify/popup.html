@@ -14,14 +14,19 @@
   <link rel="stylesheet" href="CSS/section2.css" />
   <link rel="stylesheet" href="CSS/section3.css" />
 
+  <script src="popup.js" charset="utf-8"></script>
+
   <title>Yangify - Chrome Extension</title>
 </head>
 
 <body>
   <div class="section1">
-    <img class="mainLogo" src="logo.png"></img>
-    <p class="mainTitleDes">By Carmont Connection</p>
+    <!---  <h1 class="mainTitle">Yangify</h1> -->
+    <!-- <img src="header.jpg" class="topHeaderImage"/> -->
 
+    <img class="mainLogo" src="newlogo1.png"></img>
+
+    <p class="mainTitleDes">v1.0 ©Carmont Connection</p>
   </div>
   <div id="section2" class="section2">
     <div class="yangScorecardTitle">
@@ -30,7 +35,7 @@
     </div>
 
     <div id="progressBar" class="progressBar">
-      <progress id="progress-bar-yangness" max="100" value="40" class="html5"></progress>
+      <progress id="progress-bar-yangness" max="100" value="0" class="html5"></progress>
       <img class="progressBarImg" id="progessBarImg" src="yang_gang_128 copy.png" />
 
     </div>
@@ -38,8 +43,8 @@
     <div id="belowProgessBar" class="belowProgressBarText">
       <div id="yangPercentage" class="yangPercentage">0%</div>
       <div id="yangCaption" class="yangCaption">Bernie Sadders</div>
-      <div id="yangDes" class="yangDes">This page is quite yang</div>
-      <div id="yangCount" class="yangDes">0 Yang Count :(</div>
+      <!-- <div id="yangDes" class="yangDes">This page has 0 yangs</div> -->
+      <div id="yangCount" class="yangDes">This page has 0 yangs</div>
     </div>
     <p class="yangMeterDes"></p>
 
@@ -58,7 +63,7 @@
   </div>
   <div id="section3" class="section3">
 
-    <h2 id="changeYangTo" class="changeYangTo">Change 'yang' to:</h2>
+    <h2 id="changeYangTo" class="changeYangTo">Change 'Andrew Yang' to:</h2>
 
     <div id="radioButtons" class="radioButtons">
 
@@ -67,7 +72,7 @@
         <div class="cntr">
 
           <label for="rdo-1" class="btn-radio">
-            <input type="radio" id="rdo-1" name="radio-grp">
+            <input type="radio" id="rdo-1" name="radio-grp" checked>
             <svg width="20px" height="20px" viewBox="0 0 20 20">
               <circle cx="10" cy="10" r="9"></circle>
               <path
