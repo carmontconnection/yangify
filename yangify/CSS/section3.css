@@ -1,0 +1,306 @@
+.section3 {
+background-color:#DA3248;
+/* display:flex; */
+height:207px;
+padding-top:157px;
+border-radius: 0px 0px 0px 0px;
+margin-top:-145px;
+position:relative;
+z-index:2;
+}
+
+.section33 {
+background-color:#DA3248;
+/* display:flex; */
+height:66px;
+padding-top:171px;
+border-radius: 0px 0px 0px 0px;
+margin-top:-185px;
+position:relative;
+z-index:2;
+}
+
+.changeYangTo {
+  text-align:center;
+  font-size:1.2em;
+  clear:both;
+  color:#fff;
+  letter-spacing:0.02em;
+  margin-top:2px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.radioButtons {
+  margin-left:29px;
+  color:#fff;
+  margin-top:16px;
+  margin-bottom:15px;
+  clear:both;
+}
+.radioButtons1 {
+  float:left;
+  margin-right:20px;
+}
+.radioButtons2 {
+  float:left;
+  margin-right:20px;
+}
+.radioButtons3 {
+  float:left;
+  margin-right:20px;
+}
+
+/* * * * * ** * ** ** *** ** ** **** * * */
+/* * * * * ** * ** ** *** ** ** **** * * */
+
+.cntr {
+  margin: auto;
+}
+
+.btn-radio {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.btn-radio:not(:first-child) {
+  margin-left: 20px;
+}
+@media screen and (max-width: 480px) {
+  .btn-radio {
+    display: block;
+    float: none;
+  }
+  .btn-radio:not(:first-child) {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+.btn-radio svg {
+  fill: none;
+  vertical-align: middle;
+}
+.btn-radio svg circle {
+  stroke-width: 2;
+  stroke: #fff;
+}
+.btn-radio svg path {
+  stroke: #0053ce;/* #008FFF; */
+}
+.btn-radio svg path.inner {
+  stroke-width: 6;
+  stroke-dasharray: 19;
+  stroke-dashoffset: 19;
+}
+.btn-radio svg path.outer {
+  stroke-width: 2;
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+}
+.btn-radio input {
+  display: none;
+}
+.btn-radio input:checked + svg path {
+  transition: all 0.4s ease;
+}
+.btn-radio input:checked + svg path.inner {
+  stroke-dashoffset: 38;
+  transition-delay: 0.3s;
+}
+.btn-radio input:checked + svg path.outer {
+  stroke-dashoffset: 0;
+}
+.btn-radio span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radioButtonText {
+  font-size:1.07em;
+  font-family: 'Red Hat Display', sans-serif;
+  letter-spacing:0.02em;
+  margin-left:4px;
+  color:#fff;
+}
+
+.radioButtonsLeft {
+  float:left;
+}
+
+.radioButtonsRight {
+  float:left;
+  margin-left:18px;
+}
+
+.optionButtonsBottom {
+position:relative;
+top:13px;
+clear:both;
+}
+
+.optionsButtonsText {
+  margin-bottom:7px;
+  font-size:1.1em;
+}
+
+.seperateOptionsBottom {
+  float:left;
+  margin-right:22px;
+}
+
+.btn {
+  border: 2px solid #fff;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  transition: background 600ms ease, color 600ms ease;
+  font-size:0.95em;
+}
+input[name="toggle1"].toggle {
+  display: none;
+}
+input[name="toggle1"].toggle + label {
+  cursor: pointer;
+  min-width: 29px;
+}
+input[name="toggle1"].toggle + label:hover {
+  background: none;
+  /* color: #0047af; */
+}
+input[name="toggle1"].toggle + label:after {
+  background: #0047af;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 100%;
+  z-index: -1;
+}
+input[name="toggle1"].toggle.toggle-left + label {
+  border-right: 0;
+}
+input[name="toggle1"].toggle.toggle-left + label:after {
+  left: 100%;
+}
+input[name="toggle1"].toggle.toggle-right + label {
+  margin-left: -5px;
+}
+input[name="toggle1"].toggle.toggle-right + label:after {
+  left: -100%;
+}
+input[name="toggle1"].toggle:checked + label {
+  cursor: default;
+  color: #fff;
+  transition: color 200ms;
+}
+input[name="toggle1"].toggle:checked + label:after {
+  left: 0;
+}
+
+/*  ------------------ */
+/*  ------------------ */
+
+
+input[name="toggle2"].toggle {
+  display: none;
+}
+input[name="toggle2"].toggle + label {
+  cursor: pointer;
+  min-width: 29px;
+}
+input[name="toggle2"].toggle + label:hover {
+  background: none;
+  /* color: #0047af; */
+}
+input[name="toggle2"].toggle + label:after {
+  background: #0047af;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 100%;
+  z-index: -1;
+}
+input[name="toggle2"].toggle.toggle-left + label {
+  border-right: 0;
+}
+input[name="toggle2"].toggle.toggle-left + label:after {
+  left: 100%;
+}
+input[name="toggle2"].toggle.toggle-right + label {
+  margin-left: -5px;
+}
+input[name="toggle2"].toggle.toggle-right + label:after {
+  left: -100%;
+}
+input[name="toggle2"].toggle:checked + label {
+  cursor: default;
+  color: #fff;
+  transition: color 200ms;
+}
+input[name="toggle2"].toggle:checked + label:after {
+  left: 0;
+}
+
+/*             */
+
+.bottomButtons {
+  clear:both;
+}
+
+.bottomButton {
+/* background-color:#002D70; */
+background-color:transparent;
+border:2px solid #fff;
+color:#fff;
+font-family: 'Red Hat Display', sans-serif;
+font-weight:bold;
+letter-spacing:0.06em;
+border-radius:2px;
+margin-right:5px;
+margin-top:27px;
+cursor:pointer;
+transition:0.4s;
+padding: 4px 7px 4px 7px;
+}
+
+.bottomButton:hover {
+
+/* background-color:#fff;
+border:2px solid #fff;
+color:#DA3248;
+transition:0.5s; */
+
+text-decoration:underline;
+transition:0.4s;
+}
+
+.watchTutorialButton {
+margin-left:10px;
+}
+.DonateButton {
+
+}
+
+.settingsIconStyle {
+color:#fff;
+/* background-color:#fff; */
+font-size:1.93em;
+margin-left:11px;
+cursor:pointer;
+position:relative;
+top:4px;
+}
+.backIconStyle {
+color:#fff;
+/* background-color:#fff; */
+font-size:2.15em;
+margin-left:14px;
+cursor:pointer;
+position:relative;
+top:4px;
+}
