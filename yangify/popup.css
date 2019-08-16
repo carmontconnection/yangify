@@ -4,6 +4,7 @@ body {
   min-height: 475px;
   min-width:285px;
   margin:0;
+  cursor: url(yang_gang_48_cur.cur), default;
 }
 
 .progressBar {
