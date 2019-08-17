@@ -20,11 +20,21 @@
 </head>
 
 <body>
+
   <div class="section1">
     <!---  <h1 class="mainTitle">Yangify</h1> -->
     <!-- <img src="header.jpg" class="topHeaderImage"/> -->
 
     <img class="mainLogo" src="newlogo1.png"></img>
+
+    <div class="mid">
+
+    <label class="rocker rocker-small">
+      <input type="checkbox" checked>
+      <span class="switch-left">On</span>
+      <span class="switch-right">Off</span>
+    </label>
+    </div>
 
     <p class="mainTitleDes">v1.0 ©Carmont Connection</p>
   </div>
@@ -35,8 +45,8 @@
     </div>
 
     <div id="progressBar" class="progressBar">
-      <progress id="progress-bar-yangness" max="100" value="0" class="html5"></progress>
-      <img class="progressBarImg" id="progessBarImg" src="yang_gang_128 copy.png" />
+      <progress id="progress-bar-yangness" max="100" value="80" class="html5 bar shadow zigZag"></progress>
+      <img class="progressBarImg" id="progessBarImg" src="progressFaces/bernieSadders.png" />
 
     </div>
 
@@ -137,7 +147,7 @@
 
       <div class="optionButtonsBottom">
 
-        <div class="seperateOptionsBottom">
+    <!--    <div class="seperateOptionsBottom">
           <div class="optionsButtonsText">Yang Cursor</div>
           <input id="toggle-on" class="toggle toggle-left" name="toggle1" value="false" type="radio" checked>
           <label for="toggle-on" class="btn">On</label>
@@ -152,7 +162,7 @@
           <input id="toggle-off1" class="toggle toggle-right" name="toggle2" value="true" type="radio">
           <label for="toggle-off1" class="btn">Off</label>
         </div>
-
+-->
       </div>
     </div>
 
@@ -165,9 +175,6 @@
     </div>
 
   </div>
-
-  <button>Count Yang</button>
-  <script src="popup.js" charset="utf-8"></script>
 
 </body>
 

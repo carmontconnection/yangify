@@ -1,7 +1,7 @@
 .section3 {
 background-color:#DA3248;
 /* display:flex; */
-height:207px;
+height:148px;
 padding-top:157px;
 border-radius: 0px 0px 0px 0px;
 margin-top:-145px;
@@ -12,8 +12,8 @@ z-index:2;
 .section33 {
 background-color:#DA3248;
 /* display:flex; */
-height:66px;
-padding-top:171px;
+height:43px;
+padding-top:193px;
 border-radius: 0px 0px 0px 0px;
 margin-top:-185px;
 position:relative;
@@ -22,7 +22,7 @@ z-index:2;
 
 .changeYangTo {
   text-align:center;
-  font-size:1.2em;
+  font-size:1.165em;
   clear:both;
   color:#fff;
   letter-spacing:0.02em;
@@ -262,7 +262,7 @@ font-weight:bold;
 letter-spacing:0.06em;
 border-radius:2px;
 margin-right:5px;
-margin-top:27px;
+margin-top:-9px;
 cursor:pointer;
 transition:0.4s;
 padding: 4px 7px 4px 7px;

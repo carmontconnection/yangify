@@ -39,10 +39,14 @@ function intialSettings() {
   document.getElementById("settingsIcon").classList.add('settingsIconStyle');
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+
 intialSettings()
 
 document.getElementById('settingsIcon').addEventListener('click',
   toggleSettings, false)
+
+});
 
 function toggleSettings() {
   if (document.getElementById('scorecardTitle').innerHTML === "Settings") {
@@ -79,14 +83,15 @@ function toggleSettings() {
   }
 }
 
+const yangnessCountArray = [
+  [0 /*yang count*/, 'Bernie Sadders' /* level acheived*/, 0 /* % of progressbar*/, 'progressFaces/bernieSadders.png'],
+  [2, 'Mathless', 25, 'progressFaces/mathless.png'],
+  [4, 'Ying and Yang', 50, 'progressFaces/yinyang.png'],
+  [6, 'Freedom Dividend', 75, 'progressFaces/freedomDividend.png'],
+  [12, 'Yang Gangster', 100, 'progressFaces/yangster.png']
+];
+
 function yangnessDecider(count) {
-  const yangnessCountArray = [
-    [0 /*yang count*/, 'Bernie Sadders' /* level acheived*/, 0 /* % of progressbar*/],
-    [2, 'Mathless', 25],
-    [4, 'Ying and Yang', 50],
-    [6, 'Freedom Dividend', 75],
-    [12, 'Yang Gangster', 100]
-  ]
 
   for (var i = yangnessCountArray.length - 1; i >= 0; i--) {
     const threshCount = yangnessCountArray[i][0]
@@ -180,9 +185,27 @@ document.addEventListener('DOMContentLoaded', function () {
         var percent = percentage(maxYangCount, url_count)
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
 
+        let num1;
+
+        if (percent === 0) {
+          num1 = 0;
+        } else if (percent === 25) {
+          num1 = 1;
+        } else if (percent === 50) {
+          num1 = 2;
+        } else if (percent === 75) {
+          num1 = 3;
+        } else if (percent === 100) {
+          num1 = 4;
+        }
+
+        document.getElementById('progessBarImg').src = yangnessCountArray[num1][3];
 
         var marginPos = marginMove(percent)
         document.getElementById('progessBarImg').style.marginLeft = marginPos
+
+        // NICK NEED YOUR HELP HERE, COULD YOU CHANGE THE SRC OF THE IMAGE TO THE 5
+        // INSIDE THE 'progessFaces' folder? I added the srcs to them just above in the yangnessCountArray
 
         document.getElementById('progress-bar-yangness').value = percent.toString();
         document.getElementById('yangCaption').innerHTML = level

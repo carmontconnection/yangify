@@ -37,7 +37,7 @@
   color: #38c28d;
   font-weight: 600;
   font-size: 1.42em;
-  margin-bottom: -4px;
+  margin-bottom: -1px;
 }
 
 .yangCaption {
@@ -50,7 +50,7 @@
   color: #38c28d;
   /* font-weight:600; */
   font-size: 1.07em;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .yangMeterMentions {
@@ -66,12 +66,12 @@
 }
 
 .yangMeterTitle {
-  color: #DA3248;
+  color: #e6354e;
   float: left;
 }
 
 #cardIcon {
-  color: #DA3248;
+  color: #e6354e;
   /* #002D70; */
   font-size: 2.05em;
   margin-left: 8px;
