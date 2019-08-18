@@ -24,7 +24,6 @@ htmlreplace = (a,b,element) => {
         }
     }
 htmlreplace("andrew yang","Yang Gang")
-document.body.styles.cursor = 'crosshair';
 
 chrome.runtime.sendMessage({
   url: window.location.href,

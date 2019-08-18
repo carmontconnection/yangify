@@ -6,7 +6,7 @@ var button4Name = "1000 Bux"
 
 function intialSettings() {
 
-  document.getElementById('scorecardTitle').innerHTML = "Yang Scorecard";
+  document.getElementById('scorecardTitle').innerHTML = "Yang score";
   document.getElementById("cardIcon").classList.remove('fa-cogs');
   document.getElementById("cardIcon").classList.add('fa-address-card');
 
@@ -183,20 +183,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var maxYangCount = 40;
         var percent = percentage(maxYangCount, url_count)
+        // var percent = percentage(maxYangCount, url_count)
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
 
-        let num1;
+        let num1 = 0;
 
-        if (percent === 0) {
-          num1 = 0;
-        } else if (percent === 25) {
-          num1 = 1;
-        } else if (percent === 50) {
-          num1 = 2;
-        } else if (percent === 75) {
-          num1 = 3;
-        } else if (percent === 100) {
+        if (percent >= 100) {
           num1 = 4;
+        } else if (percent >= 75) {
+          num1 = 3;
+        } else if (percent >= 50) {
+          num1 = 2;
+        } else if (percent >= 25) {
+          num1 = 1;
+        } else if (percent >= 0) {
+          num1 = 0;
         }
 
         document.getElementById('progessBarImg').src = yangnessCountArray[num1][3];
