@@ -4,6 +4,8 @@ var button2Name = "Yang Army"
 var button3Name = "Math Math"
 var button4Name = "1000 Bux"
 
+var isAppOff = undefined;
+
 function intialSettings() {
 
   document.getElementById('scorecardTitle').innerHTML = "Yang score";
@@ -41,10 +43,10 @@ function intialSettings() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-intialSettings()
+  intialSettings()
 
-document.getElementById('settingsIcon').addEventListener('click',
-  toggleSettings, false)
+  document.getElementById('settingsIcon').addEventListener('click',
+    toggleSettings, false)
 
 });
 
@@ -124,9 +126,36 @@ function marginMove(percent) {
 document.addEventListener('DOMContentLoaded', function () {
 
   const bg = chrome.extension.getBackgroundPage()
+
+
+  // if ( window.isApplicationOn === false)
+
+  document.getElementById('app-on-off-switch').addEventListener('click', onclickOnOffButton, false)
+  function onclickOnOffButton() {
+    window.isApplicationOn = document.getElementById('app-on-off-switch').checked;
+    if (window.isApplicationOn === false) {
+      window.yangNameReplace = "Andrew Yang"  
+      // changesToPopup(0, 0)
+    }
+
+    if (window.isApplicationOn === true) {
+      window.yangNameReplace = "Yang Gang"
+
+    }  
+
+    chrome.tabs.query({ currentWindow: true, active: true },
+    function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { isApplicationOn: window.isApplicationOn, yangNameReplace: window.yangNameReplace, });
+
+    })
+    }
+  
+
+
   document.getElementById('rdo-1').addEventListener('click',
     onclickButton1, false)
   function onclickButton1() {
+    document.getElementById('app-on-off-switch').checked = true
     chrome.tabs.query({ currentWindow: true, active: true },
       function (tabs) {
         window.oldName = bg.yangNameReplace
@@ -138,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('rdo-2').addEventListener('click',
     onclickButton2, false)
   function onclickButton2() {
+    document.getElementById('app-on-off-switch').checked = true
     chrome.tabs.query({ currentWindow: true, active: true },
       function (tabs) {
         window.oldName = bg.yangNameReplace
@@ -149,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('rdo-3').addEventListener('click',
     onclickButton4, false)
   function onclickButton4() {
+    document.getElementById('app-on-off-switch').checked = true
     chrome.tabs.query({ currentWindow: true, active: true },
       function (tabs) {
         window.oldName = bg.yangNameReplace
@@ -160,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('rdo-4').addEventListener('click',
     onclickButton5, false)
   function onclickButton5() {
+    document.getElementById('app-on-off-switch').checked = true
     chrome.tabs.query({ currentWindow: true, active: true },
       function (tabs) {
         window.oldName = bg.yangNameReplace
@@ -167,6 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
         chrome.tabs.sendMessage(tabs[0].id, { yangNameReplace: window.yangNameReplace })
       })
   }
+
 
   Object.keys(bg.counts).forEach(function (url) {
     chrome.tabs.query({
@@ -177,13 +210,28 @@ document.addEventListener('DOMContentLoaded', function () {
       var curr_url = tab.url;
 
       if (curr_url == url) {
-        var url_count = bg.counts[url]
-        document.getElementById('yangCount').innerHTML = `Yang Count ${url_count}`
+
+        var percent;
+        var url_count; 
+        var maxYangCount = 40;
+
+        
+        url_count =  bg.counts[url]
+        percent = percentage(maxYangCount, url_count)
+        
+        changesToPopup(url_count, percent)
+
+      }
+    });
+  })
+}, false)
+
+
+function changesToPopup(url_count, percent){
+  document.getElementById('yangCount').innerHTML = `Yang Count ${url_count}`
         var level = yangnessDecider(url_count)
 
-        var maxYangCount = 40;
-        var percent = percentage(maxYangCount, url_count)
-        // var percent = percentage(maxYangCount, url_count)
+
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
 
         let num1 = 0;
@@ -205,13 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var marginPos = marginMove(percent)
         document.getElementById('progessBarImg').style.marginLeft = marginPos
 
-        // NICK NEED YOUR HELP HERE, COULD YOU CHANGE THE SRC OF THE IMAGE TO THE 5
-        // INSIDE THE 'progessFaces' folder? I added the srcs to them just above in the yangnessCountArray
-
         document.getElementById('progress-bar-yangness').value = percent.toString();
         document.getElementById('yangCaption').innerHTML = level
 
-      }
-    });
-  })
-}, false)
+}

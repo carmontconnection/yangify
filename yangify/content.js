@@ -1,6 +1,6 @@
-let count = 0
 window.yangNameReplace = "Yang Gang"
 htmlreplace = (a,b,element) => {
+        let count = 0
         if(!element)element=document.body;
         let nodes=element.childNodes;
         for(let n=0;n<nodes.length;n++){
@@ -22,8 +22,9 @@ htmlreplace = (a,b,element) => {
             htmlreplace(a,b,nodes[n])
             }
         }
+        return count
     }
-htmlreplace("andrew yang","Yang Gang")
+let count = htmlreplace("andrew yang","Yang Gang")
 
 chrome.runtime.sendMessage({
   url: window.location.href,
@@ -34,6 +35,7 @@ chrome.runtime.sendMessage({
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
-    htmlreplace(window.yangNameReplace, request.yangNameReplace)
+    window.count = htmlreplace(window.yangNameReplace, request.yangNameReplace)
     window.yangNameReplace = request.yangNameReplace
+    window.isApplicationOn = request.isApplicationOn
 })
