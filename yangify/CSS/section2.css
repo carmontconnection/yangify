@@ -36,20 +36,20 @@
 }
 
 .yangPercentage {
-  color: #38c28d;
+  color: red; /* #38c28d;*/
   font-weight: 600;
   font-size: 1.42em;
   margin-bottom: -1px;
 }
 
 .yangCaption {
-  color: #38c28d;
+  color: red; /* #38c28d;*/
   font-weight: 600;
   font-size: 1.7em;
 }
 
 .yangDes {
-  color: #38c28d;
+  color:red ; /* #38c28d;*/
   /* font-weight:600; */
   font-size: 1.07em;
   margin-top: 3px;
