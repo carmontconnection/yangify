@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="CSS/section2.css" />
   <link rel="stylesheet" href="CSS/section3.css" />
 
+  <link rel="shortcut icon" href="newlogo1.png" type="image/x-icon"/>
+
   <script src="popup.js" charset="utf-8"></script>
 
   <title>Yangify - Chrome Extension</title>
@@ -28,7 +30,6 @@
     <img class="mainLogo" src="newlogo1.png"></img>
 
     <div class="mid">
-
     <label class="rocker rocker-small">
       <input type="checkbox" checked>
       <span class="switch-left">On</span>
@@ -36,7 +37,11 @@
     </label>
     </div>
 
-    <p class="mainTitleDes">v1.0 ©Carmont Connection</p>
+    <div class="c3">
+    <p class="mainTitleDes">v1.0. By Carmont Connection</p>
+    </div>
+
+
   </div>
   <div id="section2" class="section2">
     <div class="yangScorecardTitle">
@@ -46,27 +51,27 @@
 
     <div id="progressBar" class="progressBar">
       <progress id="progress-bar-yangness" max="100" value="0" class="html5 bar shadow zigZag"></progress>
-      <img class="progressBarImg" id="progessBarImg" src="progressFaces/bernieSadders.png" />
+      <img class="progressBarImg" id="progessBarImg" src="progressFaces/mathless.png" />
+
+      <div id="belowProgessBar" class="belowProgressBarText">
+        <div id="yangPercentage" class="yangPercentage">0%</div>
+        <div id="yangCaption" class="yangCaption">Mathless</div>
+        <!-- <div id="yangDes" class="yangDes">This page has 0 yangs</div> -->
+
+            <div id="yangCount" class="yangDes">0 Mentions of 'Andrew Yang'</div>
+      </div>
 
     </div>
-
-    <div id="belowProgessBar" class="belowProgressBarText">
-      <div id="yangPercentage" class="yangPercentage">0%</div>
-      <div id="yangCaption" class="yangCaption">Bernie Sadders</div>
-      <!-- <div id="yangDes" class="yangDes">This page has 0 yangs</div> -->
-      <div id="yangCount" class="yangDes">This page has 0 yangs</div>
-    </div>
-    <p class="yangMeterDes"></p>
 
     <div id="settingsList" class="settingsList">
 
-      <div class="settingsListInd">Report a bug<i class="fas fa-bug settingslistIcons"></i></div>
+      <a class="settingsList_a" href="https://www.carmontconnection.com/contact" target="_blank"><div class="settingsListInd">Report a bug<i class="fas fa-bug settingslistIcons"></i></div></a>
       <hr class="settingslistMiddleHrs" />
-      <div class="settingsListInd">Request a feature<i class="fas fa-satellite settingslistIcons"></i></div>
+      <a class="settingsList_a" href="https://www.carmontconnection.com/contact" target="_blank"><div class="settingsListInd">Request a feature<i class="fas fa-satellite settingslistIcons"></i></div></a>
       <hr class="settingslistMiddleHrs" />
-      <div class="settingsListInd">Rate us<i class="fas fa-star-half-alt settingslistIcons"></i></div>
+      <a class="settingsList_a" href="https://www.carmontconnection.com/contact" target="_blank"><div class="settingsListInd">Rate us<i class="fas fa-star-half-alt settingslistIcons"></i></div></a>
       <hr class="settingslistMiddleHrs" />
-      <div class="settingsListInd">Uninstall Extension<i class="fas fa-ban settingslistIcons"></i></div>
+      <a class="settingsList_a" href="https://www.carmontconnection.com/contact" target="_blank"><div class="settingsListInd">Contact Us<i class="fas fa-paper-plane settingslistIcons"></i></div></a>
 
     </div>
 
@@ -168,8 +173,11 @@
 
     <div class="bottomButtons">
 
-      <button class="bottomButton watchTutorialButton">WATCH A TUTORIAL</button>
-      <button class="bottomButton DonateButton">DONATE</button>
+      <a target="_blank" href="https://www.youtube.com/channel/UC8n1bMFsJSicOoDtpS3p0VA"><button class="bottomButton watchTutorialButton">WATCH A TUTORIAL</button></a>
+      <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FHD2GJGTHAKU4&source=url"><button class="bottomButton DonateButton">DONATE</button></a>
+
+
+
       <i class="fa fa-cogs settingsIconStyle" id="settingsIcon"></i>
 
     </div>

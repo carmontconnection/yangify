@@ -84,12 +84,13 @@ function toggleSettings() {
 }
 
 const yangnessCountArray = [
-  [0 /*yang count*/, 'Bernie Sadders' /* level acheived*/, 0 /* % of progressbar*/, 'progressFaces/bernieSadders.png'],
   [2, 'Mathless', 25, 'progressFaces/mathless.png'],
   [4, 'Ying and Yang', 50, 'progressFaces/yinyang.png'],
   [6, 'Freedom Dividend', 75, 'progressFaces/freedomDividend.png'],
   [12, 'Yang Gangster', 100, 'progressFaces/yangster.png']
 ];
+
+/* [0 /*yang count*/ /* , 'Bernie Sadders' /* level acheived*/ /* , 0 /* % of progressbar*/ /* , 'progressFaces/bernieSadders.png'], */
 
 function yangnessDecider(count) {
 
@@ -189,14 +190,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (percent === 0) {
           num1 = 0;
-        } else if (percent === 25) {
-          num1 = 1;
         } else if (percent === 50) {
-          num1 = 2;
+          num1 = 1;
         } else if (percent === 75) {
-          num1 = 3;
+          num1 = 2;
         } else if (percent === 100) {
-          num1 = 4;
+          num1 = 3;
         }
 
         document.getElementById('progessBarImg').src = yangnessCountArray[num1][3];
