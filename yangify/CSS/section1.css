@@ -10,17 +10,18 @@
 .mainLogo {
   width:133px;
   /* height:60px; */
-  margin-top:15px;
-  margin-left:18px;
+  margin-top:13px;
+  margin-left:68px; /*18px*/
   position:absolute;
 }
 
 .mainTitleDes {
   color:#e1e1e1;
   clear:both;
-  display:relative;
   margin-top:60px;
-  margin-left:19px;
+  margin-left:68px; /*9px*/
+  text-align:center;
+  align-items:center;
   font-size:0.8em;
   z-index:10;
   /* font-family: 'Red Hat Display', sans-serif;
@@ -191,7 +192,7 @@ border-radius: 0px 0px 70% 0px;
   justify-content: center; */
   position:absolute;
   right:0px;
-  top:-10px;
+  top:-7px;
 }
 
 
@@ -219,7 +220,7 @@ border-radius: 0px 0px 70% 0px;
 }
 
 .rocker-small {
-  font-size: 0.75em; /* Sizes the switch */
+  font-size: 0.67em; /* Sizes the switch */
   margin: 1em;
 }
 
@@ -227,7 +228,7 @@ border-radius: 0px 0px 70% 0px;
   content: "";
   position: absolute;
   top: 2em;
-  left: 0.6em;
+  left: 0.7em;
   right: 0.6em;
   bottom: 0;
   background-color: #999;

@@ -6,7 +6,7 @@ var button4Name = "1000 Bucks"
 
 function intialSettings() {
 
-  document.getElementById('scorecardTitle').innerHTML = "Yang score";
+  document.getElementById('scorecardTitle').innerHTML = "Yang Score";
   document.getElementById("cardIcon").classList.remove('fa-cogs');
   document.getElementById("cardIcon").classList.add('fa-address-card');
 
@@ -82,12 +82,13 @@ function toggleSettings() {
 }
 
 const yangnessCountArray = [
-  [0 /*yang count*/, 'Bernie Sadders' /* level acheived*/, 0 /* % of progressbar*/, 'progressFaces/bernieSadders.png'],
   [2, 'Mathless', 25, 'progressFaces/mathless.png'],
   [4, 'Ying and Yang', 50, 'progressFaces/yinyang.png'],
   [6, 'Freedom Dividend', 75, 'progressFaces/freedomDividend.png'],
   [12, 'Yang Gangster', 100, 'progressFaces/yangster.png']
 ];
+
+/* [0 /*yang count*/ /* , 'Bernie Sadders' /* level acheived*/ /* , 0 /* % of progressbar*/ /* , 'progressFaces/bernieSadders.png'], */
 
 function yangnessDecider(count) {
 
@@ -332,19 +333,19 @@ function changesToPopup(url_count, percent){
         var level = yangnessDecider(url_count);
 
         if (percent >= 100) {
-          yangnessColor = 'green';
+          yangnessColor = 'green'; // Changes this
           num1 = 4;
         } else if (percent >= 75) {
-          yangnessColor = 'blue';
+          yangnessColor = 'blue'; // Changes this
           num1 = 3;
         } else if (percent >= 50) {
-          yangnessColor = 'orange';
+          yangnessColor = 'orange'; // Changes this
           num1 = 2;
         } else if (percent >= 25) {
-          yangnessColor = 'yellow';
+          yangnessColor = 'yellow'; // Changes this
           num1 = 1;
         } else if (percent >= 0) {
-          yangnessColor = 'red';
+          yangnessColor = 'red'; // Changes this
           num1 = 0;
         }
 
@@ -362,6 +363,10 @@ function changesToPopup(url_count, percent){
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
         document.getElementById('yangPercentage').style.color = yangnessColor
 
+<<<<<<< HEAD
         document.getElementById('yangCount').innerHTML = `${url_count} mentions of "Andrew Yang"`
+=======
+        document.getElementById('yangCount').innerHTML = `Yang Count ${url_count}`
+>>>>>>> 7b7581ec40956986ee5c92e077048dc7e2c5e4a9
         document.getElementById('yangCount').style.color = yangnessColor
 }
