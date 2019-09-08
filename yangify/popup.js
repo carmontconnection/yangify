@@ -6,7 +6,7 @@ var button4Name = "1000 Bux"
 
 function intialSettings() {
 
-  document.getElementById('scorecardTitle').innerHTML = "Yang score";
+  document.getElementById('scorecardTitle').innerHTML = "Yang Score";
   document.getElementById("cardIcon").classList.remove('fa-cogs');
   document.getElementById("cardIcon").classList.add('fa-address-card');
 
@@ -333,19 +333,19 @@ function changesToPopup(url_count, percent){
         var level = yangnessDecider(url_count);
 
         if (percent >= 100) {
-          yangnessColor = 'green';
+          yangnessColor = 'green'; // Changes this
           num1 = 4;
         } else if (percent >= 75) {
-          yangnessColor = 'blue';
+          yangnessColor = 'blue'; // Changes this
           num1 = 3;
         } else if (percent >= 50) {
-          yangnessColor = 'orange';
+          yangnessColor = 'orange'; // Changes this
           num1 = 2;
         } else if (percent >= 25) {
-          yangnessColor = 'yellow';
+          yangnessColor = 'yellow'; // Changes this
           num1 = 1;
         } else if (percent >= 0) {
-          yangnessColor = 'red';
+          yangnessColor = 'red'; // Changes this
           num1 = 0;
         }
 
