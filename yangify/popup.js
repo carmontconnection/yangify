@@ -1,8 +1,8 @@
 // Change replace button texts
 var button1Name = "Yang Gang"
 var button2Name = "Yang Army"
-var button3Name = "Math Math"
-var button4Name = "1000 Bux"
+var button3Name = "Math Man"
+var button4Name = "1000 Bucks"
 
 function intialSettings() {
 
@@ -156,10 +156,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.isApplicationOn = document.getElementById('app-on-off-switch').checked;
     if (window.isApplicationOn === false) {
-      window.yangNameReplace = "Andrew Yang"  
+      window.yangNameReplace = "Andrew Yang"
       bg.isApplicationOn = false;
       chrome.storage.sync.set({isAppOn: false}, function() {
-      
+
       });
     }
 
@@ -177,10 +177,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       bg.isApplicationOn = true;
       chrome.storage.sync.set({isAppOn: true}, function() {
-      
+
 
       });
-    }  
+    }
 
     // chrome.tabs.query({ currentWindow: true, active: true },
     chrome.tabs.query({},
@@ -194,10 +194,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // chrome.tabs.sendMessage(tabs[0].id, { isApplicationOn: window.isApplicationOn, yangNameReplace: window.yangNameReplace, whatButton: 1 });
 
 
-    
+
 
     }
-  
+
 
   document.getElementById('rdo-1').addEventListener('click',
     onclickButton1, false)
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.sendMessage(tabs[i].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg});
         }
       })
-    
+
     // chrome.tabs.query({ currentWindow: true, active: true },
     //   function (tabs) {
     //     window.yangNameReplace = button1Name
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.sendMessage(tabs[i].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg  });
         }
       })
-    
+
     // chrome.tabs.query({ currentWindow: true, active: true },
     //   function (tabs) {
     //     window.yangNameReplace = button2Name
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   getCount()
-  
+
   function getCount(){
     Object.keys(bg.counts).forEach(function (url) {
       chrome.tabs.query({
@@ -306,18 +306,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var tab = tabs[0];
         var curr_url = tab.url;
-  
+
         if (curr_url == url) {
-  
+
           var percent;
-          var url_count; 
+          var url_count;
           var maxYangCount = 40;
-   
+
           url_count =  bg.counts[url]
-          percent = percentage(maxYangCount, url_count) 
-          
+          percent = percentage(maxYangCount, url_count)
+
           changesToPopup(url_count, percent)
-  
+
         }
       });
     })
@@ -356,12 +356,12 @@ function changesToPopup(url_count, percent){
         document.getElementById('progress-bar-yangness').value = percent.toString();
 
         document.getElementById('yangCaption').innerHTML = level
-        document.getElementById('yangCaption').style.color = yangnessColor 
+        document.getElementById('yangCaption').style.color = yangnessColor
 
 
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
-        document.getElementById('yangPercentage').style.color = yangnessColor 
+        document.getElementById('yangPercentage').style.color = yangnessColor
 
-        document.getElementById('yangCount').innerHTML = `Yang Count ${url_count}`
-        document.getElementById('yangCount').style.color = yangnessColor 
+        document.getElementById('yangCount').innerHTML = `${url_count} mentions of "Andrew Yang"`
+        document.getElementById('yangCount').style.color = yangnessColor
 }
