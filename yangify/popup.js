@@ -82,7 +82,7 @@ function toggleSettings() {
 }
 
 const yangnessCountArray = [
-  [2, 'Mathless', 25, 'progressFaces/mathless.png'],
+  [0, 'Mathless', 25, 'progressFaces/mathless.png'],
   [4, 'Ying and Yang', 50, 'progressFaces/yinyang.png'],
   [6, 'Freedom Dividend', 75, 'progressFaces/freedomDividend.png'],
   [12, 'Yang Gangster', 100, 'progressFaces/yangster.png']
