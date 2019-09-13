@@ -332,20 +332,23 @@ function changesToPopup(url_count, percent){
         var yangnessColor = 'red';
         var level = yangnessDecider(url_count);
 
-        if (percent >= 100) {
-          yangnessColor = 'green'; // Changes this
-          num1 = 4;
-        } else if (percent >= 75) {
-          yangnessColor = 'blue'; // Changes this
+        // if (percent >= 100) {
+        //   yangnessColor = 'green'; // Changes this
+        //   num1 = 4;
+        // } else 
+
+        // #7DCBF5 - Light blue from logo
+        if (percent >= 75) {
+          yangnessColor = '#7DCBF5'; // Changes this
           num1 = 3;
         } else if (percent >= 50) {
-          yangnessColor = 'orange'; // Changes this
+          yangnessColor = '#2ECC40'; // Changes this
           num1 = 2;
         } else if (percent >= 25) {
-          yangnessColor = 'yellow'; // Changes this
+          yangnessColor = '#FF851B'; // Changes this
           num1 = 1;
         } else if (percent >= 0) {
-          yangnessColor = 'red'; // Changes this
+          yangnessColor = '#FF4136'; // Changes this
           num1 = 0;
         }
 
@@ -363,10 +366,6 @@ function changesToPopup(url_count, percent){
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
         document.getElementById('yangPercentage').style.color = yangnessColor
 
-<<<<<<< HEAD
         document.getElementById('yangCount').innerHTML = `${url_count} mentions of "Andrew Yang"`
-=======
-        document.getElementById('yangCount').innerHTML = `Yang Count ${url_count}`
->>>>>>> 7b7581ec40956986ee5c92e077048dc7e2c5e4a9
         document.getElementById('yangCount').style.color = yangnessColor
 }
