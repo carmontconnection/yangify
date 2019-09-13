@@ -335,11 +335,11 @@ function changesToPopup(url_count, percent){
         // if (percent >= 100) {
         //   yangnessColor = 'green'; // Changes this
         //   num1 = 4;
-        // } else 
+        // } else
 
         // #7DCBF5 - Light blue from logo
         if (percent >= 75) {
-          yangnessColor = '#7DCBF5'; // Changes this
+          yangnessColor = '#83c3e6'; // Changes this //
           num1 = 3;
         } else if (percent >= 50) {
           yangnessColor = '#2ECC40'; // Changes this
@@ -348,7 +348,7 @@ function changesToPopup(url_count, percent){
           yangnessColor = '#FF851B'; // Changes this
           num1 = 1;
         } else if (percent >= 0) {
-          yangnessColor = '#FF4136'; // Changes this
+          yangnessColor = '#83c3e6'; // Changes this // 
           num1 = 0;
         }
 
