@@ -179,11 +179,8 @@ document.addEventListener('DOMContentLoaded', function () {
       bg.isApplicationOn = true;
       chrome.storage.sync.set({isAppOn: true}, function() {
 
-
       });
     }
-
-    // chrome.tabs.query({ currentWindow: true, active: true },
     chrome.tabs.query({},
     function (tabs) {
       var message =  { isApplicationOn: window.isApplicationOn, yangNameReplace: window.yangNameReplace, whatButton: 1 };
@@ -191,12 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
           chrome.tabs.sendMessage(tabs[i].id, message);
       }
     })
-
-    // chrome.tabs.sendMessage(tabs[0].id, { isApplicationOn: window.isApplicationOn, yangNameReplace: window.yangNameReplace, whatButton: 1 });
-
-
-
-
     }
 
 
@@ -213,14 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.sendMessage(tabs[i].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg});
         }
       })
-
-    // chrome.tabs.query({ currentWindow: true, active: true },
-    //   function (tabs) {
-    //     window.yangNameReplace = button1Name
-    //     window.whatButtonBg = 1
-    //     bg.whatButtonBg = 1
-    //     chrome.tabs.sendMessage(tabs[0].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg})
-    //   })
   }
 
   document.getElementById('rdo-2').addEventListener('click',
@@ -239,14 +222,6 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.sendMessage(tabs[i].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg  });
         }
       })
-
-    // chrome.tabs.query({ currentWindow: true, active: true },
-    //   function (tabs) {
-    //     window.yangNameReplace = button2Name
-    //     window.whatButtonBg = 2
-    //     bg.whatButtonBg = 2
-    //     chrome.tabs.sendMessage(tabs[0].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg  })
-    //   })
   }
 
   document.getElementById('rdo-3').addEventListener('click',
@@ -263,14 +238,6 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.sendMessage(tabs[i].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg  });
         }
       })
-    // chrome.tabs.query({ currentWindow: true, active: true },
-    //   function (tabs) {
-    //     window.yangNameReplace = button3Name
-    //     window.whatButtonBg = 3
-    //     bg.whatButtonBg = 3
-    //     chrome.tabs.sendMessage(tabs[0].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg })
-    //   })
-
   }
 
   document.getElementById('rdo-4').addEventListener('click',
@@ -287,13 +254,6 @@ document.addEventListener('DOMContentLoaded', function () {
             chrome.tabs.sendMessage(tabs[i].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg  });
         }
       })
-    // chrome.tabs.query({ currentWindow: true, active: true },
-    //   function (tabs) {
-    //     window.yangNameReplace = button4Name
-    //     window.whatButtonBg = 4
-    //     bg.whatButtonBg = 4
-    //     chrome.tabs.sendMessage(tabs[0].id, { yangNameReplace: window.yangNameReplace, whatButton: window.whatButtonBg })
-    //   })
   }
 
   getCount()
@@ -332,11 +292,6 @@ function changesToPopup(url_count, percent){
         var yangnessColor = 'red';
         var level = yangnessDecider(url_count);
 
-        // if (percent >= 100) {
-        //   yangnessColor = 'green'; // Changes this
-        //   num1 = 4;
-        // } else
-
         // #7DCBF5 - Light blue from logo
         if (percent >= 75) {
           yangnessColor = '#83c3e6'; // Changes this //
@@ -348,7 +303,7 @@ function changesToPopup(url_count, percent){
           yangnessColor = '#FF851B'; // Changes this
           num1 = 1;
         } else if (percent >= 0) {
-          yangnessColor = '#83c3e6'; // Changes this // 
+          yangnessColor = '#ff4136'; // Changes this // 
           num1 = 0;
         }
 
@@ -361,7 +316,6 @@ function changesToPopup(url_count, percent){
 
         document.getElementById('yangCaption').innerHTML = level
         document.getElementById('yangCaption').style.color = yangnessColor
-
 
         document.getElementById('yangPercentage').innerHTML = percent.toString() + "%";
         document.getElementById('yangPercentage').style.color = yangnessColor
