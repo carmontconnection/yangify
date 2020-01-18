@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+
+body {
+  min-height: 403px;
+  min-width:285px;
+  margin:0;
+  /* cursor: url(yang_gang_48_cur.cur), default; */
+}
+
+.progressBar {
+  text-align:center;
+  margin-top:5px;
+  margin-bottom:-4px;
+}
+
+
+li {
+    width: 50%;
+    float: left;
+    list-style-type: none;
+
+    padding-right: 5.3333333%;
+}
+
+li:nth-child(even) { margin-bottom: 5em;}
+
+progress:not(value) {
+
+}
+
+progress[value] {
+    appearance: none;
+    /* border: none; */
+    width: 72%; height: 34px;
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 2px 1px 2px 3px #e1e1e1;
+    color: royalblue;
+    position: relative;
+    margin: 0 0 1.5em;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #fff;
+    border-radius: 3px;
+    /* box-shadow: 0 2px 3px rgba(0,0,0,.5) inset; */
+}
+
+progress[value]::-webkit-progress-value {
+     position: relative;
+
+    background-size: 17px 17px, 100% 100%, 100% 100%;
+    border-radius:3px;
+
+    /* Let's animate this *
+    /* animation: animate-stripes 5s linear infinite; */
+}
+
+/* @keyframes animate-stripes { 100% { background-position: -100px 0; } } */
+
+
+progress[value]::-webkit-progress-value:after {
+    content: '';
+    position: absolute;
+
+    width:5px; height:5px;
+    top:7px; right:7px;
+
+    background-color: white;
+    border-radius: 100%;
+}
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    /* background-image:
+    -moz-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 33%,
+                                                     rgba(0,0,0,.1) 33%,
+                                                     rgba(0,0,0,.1) 66%,
+                                                     transparent 66%),
+    -moz-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44); */
+
+    /* background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius:3px; */
+
+    /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+.progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+    /* Dimensions should be similar to the parent progress element. */
+    width: 100%; height:20px;
+}
+
+.progress-bar span {
+    /* background-color: royalblue;
+    border-radius: 3px;
+
+    display: block;
+    text-indent: -9999px; */
+}
+
+p[data-value] {
+  position: relative;
+}
+
+p[data-value]:after {
+    /* content: attr(data-value) '%';
+    position: absolute; right:0; */
+}
+
+.html5::-webkit-progress-value {
+    /* Gradient background with Stripes */
+    /* background-image:
+    -webkit-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 100%,
+                                                     rgba(218, 50, 72, 1) 33%,
+                                                     transparent,
+                                                     transparent 66%),
+    -webkit-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #ff5c1f, #38c28d); */
+
+  /* background: repeating-linear-gradient(
+    -55deg,
+    #fff,
+    #fff 5px,
+    #fff 4px,
+    #DA3248 11.5px
+  ) */
+
+  /* border-radius: 20px;
+  width: 0%;
+  height: 100%;
+  transition: width;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.36,.55,.63,.48);
+
+  background-size: cover; */
+
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f33132' fill-opacity='0.74' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
+
+  /* background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='150' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.88 12h-3.656z' fill='%23cc2186' fill-opacity='0.7' fill-rule='evenodd'/%3E%3C/svg%3E"); */
+}
+
+.html5::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    /* background-image:
+    -moz-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 33%,
+                                                     rgba(0,0,0,.1) 33%,
+                                                     rgba(0,0,0,.1) 66%,
+                                                     transparent 66%),
+    -moz-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44); */
+}
+
+
+
+
+.zigZag {
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a3e1e7' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+.bar {
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    transition: width;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.36,.55,.63,.48);
+}
+
+.shadow {
+    /* 25 50 */
+    box-shadow: 0px 45px 50px rgba(0, 0, 0, 0.25);
+}
+
+.progress {
+    display: inline-block;
+    width: 400px;
+    height: 50px;
+    margin: 35px;
+    border-radius: 20px;
+    background: #f9f9f9;
+}

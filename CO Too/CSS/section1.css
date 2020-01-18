@@ -1,0 +1,358 @@
+.mainTitle {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 2em;
+  color: #fff;
+  letter-spacing: 0.02em;
+  margin-left: 50px;
+  margin-top: 27px;
+}
+
+.mainLogo {
+  width: 133px;
+  /* height:60px; */
+  margin-top: 13px;
+  margin-left: 68px;
+  /*18px*/
+  position: absolute;
+}
+
+.mainTitleDes {
+  color: #e1e1e1;
+  clear: both;
+  margin-top: 60px;
+  margin-left: 68px;
+  /*9px*/
+  text-align: center;
+  align-items: center;
+  font-size: 0.8em;
+  z-index: 10;
+  /* font-family: 'Red Hat Display', sans-serif;
+  letter-spacing:0.045em; */
+
+}
+
+.section1 {
+  background-color: #77F2D0;
+
+  display: flex;
+  margin-top: 0px;
+  height: 164px;
+  z-index: 4;
+  position: relative;
+  border-radius: 0px 0px 70% 0px;
+}
+
+.firstStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+}
+
+.secondStarTop {
+  color: #CCFAED;
+  font-size: 1.39em;
+  position: absolute;
+  top: 30px;
+  right: 8px;
+}
+
+.thirdStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 43px;
+  right: 20px;
+}
+
+.fourthStarTop {
+  color: #CCFAED;
+  font-size: 1.39em;
+  position: absolute;
+  top: 53px;
+  right: 34px;
+}
+
+.fifthStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 60px;
+  right: 49px;
+}
+
+.sixthStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 68px;
+  right: 64px;
+}
+
+.seventhStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 73px;
+  right: 80px;
+}
+
+.eigthStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 77px;
+  right: 96px;
+}
+
+.ninthStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 80px;
+  right: 113px;
+}
+
+.tenthStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 83px;
+  right: 129px;
+}
+
+.eleventhStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 84px;
+  right: 145px;
+}
+
+.twelvethStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 86px;
+  right: 161px;
+}
+
+.thirteenthStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 87px;
+  right: 177px;
+}
+
+.fourteenthStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 88px;
+  right: 193px;
+}
+
+.fifteenthStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 88px;
+  right: 208px;
+}
+
+.sixteenthStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 88px;
+  right: 224px;
+}
+
+.seventeenthStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 88px;
+  right: 240px;
+}
+
+.eighteenthStarTop {
+  color: #ed3956;
+  font-size: 1.39em;
+  position: absolute;
+  top: 88px;
+  right: 256px;
+}
+
+.nineteenthStarTop {
+  color: #fff;
+  font-size: 1.39em;
+  position: absolute;
+  top: 88px;
+  right: 271px;
+}
+
+.moneyBillTitle {
+  color: #3cd494;
+  font-size: 1.6em;
+  position: absolute;
+  top: 64px;
+  left: 23px;
+}
+
+
+/*********** */
+
+.mid {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: absolute;
+  right: 0px;
+  top: -7px;
+}
+
+
+/* Switch starts here */
+.rocker {
+  display: inline-block;
+  position: relative;
+  /*
+  SIZE OF SWITCH
+  ==============
+  All sizes are in em - therefore
+  changing the font-size here
+  will change the size of the switch.
+  See .rocker-small below as example.
+  */
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid transparent;
+}
+
+.rocker-small {
+  font-size: 0.67em;
+  /* Sizes the switch */
+  margin: 1em;
+}
+
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 2em;
+  left: 0.7em;
+  right: 0.6em;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid transparent;
+  border-bottom: 0;
+}
+
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+}
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #DA3248;
+  color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+input:checked+.switch-left {
+  background-color: rgb(101, 209, 178);
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked+.switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+input:checked+.switch-left+.switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked+.switch-left+.switch-right::before {
+  background-color: #ccc;
+}
+
+/* Keyboard Users */
+input:focus+.switch-left {
+  color: #333;
+}
+
+input:checked:focus+.switch-left {
+  color: #fff;
+}
+
+input:focus+.switch-left+.switch-right {
+  color: #fff;
+}
+
+input:checked:focus+.switch-left+.switch-right {
+  color: #333;
+}
